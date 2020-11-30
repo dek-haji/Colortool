@@ -4,15 +4,25 @@ const isValidHex = (hex) => {
     return strippedHex.length === 3 || strippedHex.length === 6;
 }
 console.log(isValidHex("#00000"));
-const hexInput = document.getElementById("hexInput");
-const inputColor = document.getElementById("inputColor");
+const hexInput = document.getElementById('hexInput');
+const inputColor = document.getElementById('inputColor');
 
-hexInput.addEventListener("keyup", (event) => {
-    const hex = hexInput.value
+hexInput.addEventListener('keyup', () => {
+    const hex = hexInput.value;
     if (!isValidHex(hex)) return;
-    inputColor.style.backgroundColor = hex;
-})
 
+    const strippedHex = hex.replace('#', '');
+
+    inputColor.style.backgroundColor = "#" + strippedHex;
+})
+//Create a function to convert Hex to RGB
+const convertHexToRGB = () => {
+    if (!hex) return false;
+}
+//this should work with 3 or 6 character hex values
+//Hint - useParseInt(16) to convert a hex value to a decimal value
+//should return an object with 3 properties - r,g, and b
+//Test your function with a few different use cases
 
 
 
