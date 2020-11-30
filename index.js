@@ -41,6 +41,17 @@ const convertRGBToHex = (r, g, b) => {
     return hex;
 }
 
+//get a reference to the slider and sliderText DOM elements
+const sliderText = document.getElementById("sliderText")
+const slider = document.getElementById("slider");
+//create an input event listener
+// Iused .textcontent to manipulate the dom value
+slider.addEventListener("input", () => {
+    console.log(slider.value);
+    sliderText.textContent = `${slider.value}%`;
+})
+//display the value of the slider 
+
 
 console.log(convertRGBToHex(0,255,255));
 //this should work with 3 or 6 character hex values
